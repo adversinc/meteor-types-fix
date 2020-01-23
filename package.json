@@ -1,0 +1,22 @@
+{
+  "name": "meteor-meteor-fix",
+  "version": "1.0.0",
+  "description": "Additional fixes and hacks to avoid typescript compilation warnings for Meteor",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adversinc/meteor-types-fix"
+  },
+  "keywords": [
+    "meteor",
+    "typescript"
+  ],
+  "author": "Glaznah Gassner",
+  "license": "MIT"
+}
