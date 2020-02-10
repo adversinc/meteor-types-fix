@@ -5,11 +5,16 @@
 // Definitions by:
 // <https://github.com/tomitrescak>
 
+type TriggerFunction = () => void;
+
 interface FlowRouterRouteParameters {
 	name?: string;
 	subscriptions?: Function;
 	action?: Function;
 	middlewares?: any[];
+
+	triggersEnter?: TriggerFunction[];
+	triggersExit?: TriggerFunction[];
 }
 
 interface FlowRouterRoute {
@@ -44,6 +49,11 @@ interface FlowRouterStatic {
 	group(params: FlowRouterGroupParams): FlowRouterGroup;
 	subsReady(subscription?: string): boolean;
 	redirect(route: string): void;
+
+	// TODO: finish declaration
+	triggers: {
+		enter([]);
+	}
 }
 
 declare var FlowRouter: FlowRouterStatic;

@@ -11,6 +11,7 @@ declare module Meteor {
 declare module Blaze {
 	interface EventsMap {
 		// helper for event entries
+		// @ts-ignore Overwrites the @types/meteor
 		[key: string]: (event: MouseEvent, template: Template) => void;
 	}
 }
