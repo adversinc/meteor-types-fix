@@ -14,4 +14,8 @@ declare module Blaze {
 		// @ts-ignore Overwrites the @types/meteor
 		[key: string]: (event: MouseEvent, template: Template) => void;
 	}
+
+	const _globalHelpers: {
+		[name: string]: (...args: any[]) => any;
+	}
 }
