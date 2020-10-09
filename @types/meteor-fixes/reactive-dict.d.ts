@@ -23,3 +23,11 @@ declare interface ReactiveDictStrict<U, T> extends ReactiveDict<U, T> {
 	clear(): void;
 	destroy(): void;
 }
+
+/**
+ * Strictly typing for ReactiveDict's
+ */
+declare interface StrictDict<U> {
+	get<T extends keyof U>(key: T): U[T] | null;
+	set<T extends keyof U>(key: T, value: U[T]): void;
+}
