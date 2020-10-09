@@ -14,12 +14,12 @@ declare interface ReactiveDict<U,T> {
  * Required since TypeScript does not allow overriding declarations, and
  * @types/Meteor adds its own relaxed ReactiveDict
  */
-declare interface ReactiveDictStrict<U, T> extends ReactiveDict<U, T> {
-	get(key: U): T;
-	set(key: U, newValue: T): void;
+declare interface StrictDict<U, T extends keyof U = keyof U> extends ReactiveDict<U, T> {
+	get(key: T): U[T];
+	set(key: T, newValue: U[T]): void;
 
-	setDefault(key: U, value?: T): void;
-	equals(key: U, value: T | undefined | null): boolean;
+	setDefault(key: T, value?: U[T]): void;
+	equals(key: T, value: U[T] | undefined | null): boolean;
 	clear(): void;
 	destroy(): void;
 }
@@ -27,7 +27,7 @@ declare interface ReactiveDictStrict<U, T> extends ReactiveDict<U, T> {
 /**
  * Strictly typing for ReactiveDict's
  */
-declare interface StrictDict<U> {
+declare interface StrictDict3<U> {
 	get<T extends keyof U>(key: T): U[T] | null;
 	set<T extends keyof U>(key: T, value: U[T]): void;
 }
