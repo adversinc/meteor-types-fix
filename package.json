@@ -18,5 +18,8 @@
     "typescript"
   ],
   "author": "Glaznah Gassner",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@types/meteor": "^2.6.2"
+  }
 }
