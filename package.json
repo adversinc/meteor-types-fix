@@ -1,6 +1,6 @@
 {
   "name": "meteor-types-fix",
-  "version": "1.3.1",
+  "version": "2.0.0",
   "description": "Additional fixes and hacks to avoid typescript compilation warnings for Meteor",
   "main": "index.js",
   "scripts": {
